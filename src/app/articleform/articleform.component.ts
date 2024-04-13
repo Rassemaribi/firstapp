@@ -18,18 +18,17 @@ export class ArticleformComponent implements OnInit {
     private AR: ArticleService, 
     private router: Router,
     private activatedroute: ActivatedRoute,
-    public dialogRef: MatDialogRef<ArticleformComponent>
+    public dialogRef: MatDialogRef<ArticleformComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) { }
 
   formArticle!: FormGroup;
 
   ngOnInit(): void {
-    this.idcourant = this.activatedroute.snapshot.params['id'];
-
-    if (!!this.idcourant) {
-      this.AR.getArticleById(this.idcourant).subscribe((article: Publication) => {
-        this.initForm2(article);
-      });
+    if (this.data) {
+      console.log('ID:', this.data.id);
+      console.log('Article:', this.data.article);
+      this.initForm2(this.data.article);
     } else {
       this.initForm1();
     }
@@ -56,19 +55,29 @@ export class ArticleformComponent implements OnInit {
   }
 
   save(): void {
-    // Fermer la boîte de dialogue et envoyer les données du formulaire
-    this.dialogRef.close(this.formArticle.value);
-
-    // Ajouter les éléments du formulaire au tableau
-    this.AR.ONSAVE(this.formArticle.value).subscribe(() => {
-      console.log('Article ajouté avec succès.');
-      this.router.navigate(['/article']);
-      // Rediriger l'utilisateur vers une autre page ou faire une autre action si nécessaire
-      this.close();
-    });
+    if (this.idcourant) {
+      // Update existing article
+      this.AR.updateArticle(this.idcourant, this.formArticle.value).subscribe(() => {
+        console.log('Article mis à jour avec succès.');
+        this.closeAndRedirect();
+      });
+    } else {
+      // Add new article
+      this.AR.ONSAVE(this.formArticle.value).subscribe(() => {
+        console.log('Article ajouté avec succès.');
+        this.closeAndRedirect();
+      });
+    }
+  }
+  
+  closeAndRedirect(): void {
+    this.dialogRef.close();
+    this.router.navigate(['/article']);
   }
 
   close(): void {
     this.dialogRef.close();
   }
+
+  // Vous pouvez ajouter d'autres méthodes ici selon les besoins de votre application
 }
