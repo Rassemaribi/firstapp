@@ -1,0 +1,70 @@
+{
+  "member": [
+    {
+      "id": "1234",
+      "cin": "42926262626",
+      "name": "racem",
+      "type": "Etudiant",
+      "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+      "createddate": "12/01/2024"
+    },
+    {
+      "id": "495",
+      "cin": "4815656165",
+      "name": "doudi",
+      "type": "Etudiant",
+      "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+      "createddate": "12/01/2023"
+    },
+    {
+      "id": "695",
+      "cin": "4155841521",
+      "name": "dorra",
+      "type": "Etudiant",
+      "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+      "createddate": "11/03/2026"
+    }
+  ],
+  "publication": [
+    {
+      "id": "5ffd",
+      "type": "FGEGR",
+      "titre": "GER",
+      "lien": "cd",
+      "sourcepdf": "RACEM ARIBI",
+      "date": "2024-04-17T23:00:00.000Z"
+    },
+    {
+      "id": "4c16",
+      "type": "FGEGR",
+      "titre": "GER",
+      "lien": "cd",
+      "sourcepdf": "RACEM ARIBI",
+      "date": "2024-04-17T23:00:00.000Z"
+    },
+    {
+      "id": "b32b",
+      "type": "HP",
+      "titre": "PC",
+      "lien": "WWW.HP.COM",
+      "sourcepdf": "PDF",
+      "date": "2024-04-17T23:00:00.000Z"
+    },
+    {
+      "id": "2887",
+      "type": "HP",
+      "titre": "VECTUS",
+      "lien": "etudiant",
+      "sourcepdf": "https://helpx.adobe.com/fr/acrobat/using/links-attachments-pdfs.html#:~:text=Qu'est%2Dce%20qu','une%20adresse%20e%2Dmail.",
+      "date": "2024-04-10T23:00:00.000Z"
+    },
+    {
+      "type": "vetcaaaaaaaaaaaa",
+      "titre": "ghtt",
+      "lien": "etudiant",
+      "sourcepdf": "https://helpx.adobe.com/fr/acrobat/using/links-attachments-pdfs.html#:~:text=Qu'est%2Dce%20qu','une%20adresse%20e%2Dmail.",
+      "date": "2024-04-19T23:00:00.000Z",
+      "id": "c32e"
+    }
+  ]
+}

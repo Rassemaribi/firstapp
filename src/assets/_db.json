@@ -1,0 +1,46 @@
+{
+    "publication":[{"id":"12345",
+    "type":"electronic",
+    "titre":"hp",
+    "lien":"www.hp.com",
+    "sourcepdf":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+    "createddate":"12/01/2024"
+    },
+    {"id":"1236",
+    "type":"informztique",
+    "titre":"Dell",
+    "lien":"www.hp.com",
+    "sourcepdf":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+    "createddate":"12/03/2024"
+    },
+    {"id":"12347",
+    "type":"system",
+    "titre":"pavilion",
+    "lien":"www.hp.com",
+    "sourcepdf":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+    "createddate":"12/02/2026"
+    },
+    {"id":"12347",
+    "type":"shellllo",
+    "titre":"vectus",
+    "lien":"www.vect.com",
+    "sourcepdf":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+    "createddate":"12/02/2026"
+    },
+    {"id":"123488",
+    "type":"systemfnbei",
+    "titre":"pavilionhzefb",
+    "lien":"www.sys.com",
+    "sourcepdf":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+    "createddate":"12/02/2024"
+    },
+    {"id":"12346267",
+    "type":"ensol",
+    "titre":"pavilion",
+    "lien":"www.hp.com",
+    "sourcepdf":"https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+    "createddate":"12/02/2026"
+    }
+
+]
+}

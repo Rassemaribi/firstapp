@@ -1,0 +1,40 @@
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color:moccasin;
+   margin: 50px;
+
+  }
+  
+  form {
+    width: 800px; /* Augmentez la largeur maximale du formulaire */
+   margin: 50px;
+  }
+  
+  mat-form-field {
+    width: calc(100% - 40px); /* Réduisez les marges pour la largeur totale du champ de formulaire */
+    margin-bottom: 20px;
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .mat-raised-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .mat-raised-button.mat-primary {
+    background-color: #28a745;
+  }
+  

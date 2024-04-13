@@ -1,0 +1,25 @@
+<h1>Créer un nouveau membre</h1>
+
+<form [formGroup]="form" (ngSubmit)="onsub()" class="form-container">
+  <mat-form-field class="full-width">
+    <mat-label>CIN</mat-label>
+    <input matInput placeholder="CIN" formControlName="cin">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Nom</mat-label>
+    <input matInput placeholder="Nom" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>CV</mat-label>
+    <input matInput placeholder="CV" formControlName="cv">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Type</mat-label>
+    <input matInput placeholder="Type" formControlName="type">
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Valider</button>
+</form>
