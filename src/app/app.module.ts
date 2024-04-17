@@ -31,6 +31,8 @@ import { ArticleformComponent } from './articleform/articleform.component';
 import { MatSortModule} from '@angular/material/sort';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { FormeventComponent } from './formevent/formevent.component';
+import { VisibleComponent } from './visible/visible.component';
 
 
 
@@ -48,7 +50,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     ArticlesComponent,
     EventsComponent,
     LoginComponent,
-    ArticleformComponent
+    ArticleformComponent,
+    FormeventComponent,
+    VisibleComponent
   ],
   imports: [
     FlexLayoutModule,

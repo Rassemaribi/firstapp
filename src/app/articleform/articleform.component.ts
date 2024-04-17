@@ -20,7 +20,7 @@ export class ArticleformComponent implements OnInit {
     private activatedroute: ActivatedRoute,
     public dialogRef: MatDialogRef<ArticleformComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) { }
+  ) {this.idcourant = data.id;}
 
   formArticle!: FormGroup;
 
@@ -56,9 +56,11 @@ export class ArticleformComponent implements OnInit {
 
   save(): void {
     if (this.idcourant) {
+      console.log('ID:', this.idcourant);
       // Update existing article
       this.AR.updateArticle(this.idcourant, this.formArticle.value).subscribe(() => {
         console.log('Article mis à jour avec succès.');
+        
         this.closeAndRedirect();
       });
     } else {

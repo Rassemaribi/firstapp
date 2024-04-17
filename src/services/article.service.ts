@@ -29,6 +29,7 @@ export class ArticleService {
   }
 
   updateArticle(id: string, formArticle:any): Observable<Publication> {
+    console.log('ID:', id);
     return this.httpClient.put<Publication>(`http://localhost:3000/publication/${id}`, formArticle);
   }
 
