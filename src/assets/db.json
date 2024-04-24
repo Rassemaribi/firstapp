@@ -93,16 +93,10 @@
   ],
   "evenements": [
     {
-      "id": 1,
+      "id": "1",
       "titre": "Conference on AI",
       "date": "2022-12-12T00:00:00Z",
       "lieu": "Paris"
-    },
-    {
-      "id": 2,
-      "titre": "Web Development Workshop",
-      "date": "2023-01-20T00:00:00Z",
-      "lieu": "New York"
     },
     {
       "id": "fca3",
@@ -111,22 +105,16 @@
       "lieu": "Pariss"
     },
     {
-      "id": "885c",
       "titre": "Conference on AI",
       "date": "2022-12-12T00:00:00Z",
-      "lieu": "Paris"
+      "lieu": "Paris",
+      "id": "885c"
     },
     {
       "id": "4dc8",
       "titre": "Confirance",
       "date": "2024-04-18T23:00:00.000Z",
       "lieu": "TUNIS"
-    },
-    {
-      "titre": "7",
-      "date": "2024-04-21T23:00:00.000Z",
-      "lieu": "ss",
-      "id": "6426"
     }
   ]
 }
