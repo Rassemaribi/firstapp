@@ -6,7 +6,22 @@
       "name": "racem",
       "type": "Etudiant",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
-      "createddate": "12/01/2024"
+      "createddate": "12/01/2024",
+      "tab_pub": [{
+        "id": "5ffd",
+        "type": "FGEGR",
+        "titre": "GER",
+        "lien": "cd",
+        "sourcepdf": "RACEM ARIBI",
+        "date": "2024-04-17T23:00:00.000Z"
+      }],
+      "tab_event": [ {
+        "id": "1",
+        "titre": "Conference on AI",
+        "date": "2022-12-12T00:00:00Z",
+        "lieu": "Paris"
+      }]
+    
     },
     {
       "id": "495",
@@ -14,7 +29,9 @@
       "name": "doudi",
       "type": "Etudiant",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
-      "createddate": "12/01/2023"
+      "createddate": "12/01/2023",
+      "tab_pub": [],
+      "tab_event": []
     },
     {
       "id": "695",
@@ -22,7 +39,9 @@
       "name": "dorra",
       "type": "Etudiant",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
-      "createddate": "11/03/2026"
+      "createddate": "11/03/2026",
+      "tab_pub": [],
+      "tab_event": []
     }
   ],
   "publication": [

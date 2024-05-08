@@ -14,7 +14,7 @@ export class DashboardComponent {
   chartData: ChartDataset[] = [
     {
       label: 'Number of Items',
-      data: [ 10, 20, 30, 40, 50, 60 ]
+      data: [ ]
     }
   ];
   chartLabels: string[] = [];
@@ -30,6 +30,7 @@ export class DashboardComponent {
   Nb_events !: number;
   Nb_articles !: number;
   Nb_outils !: number;
+  tab_articles: number[] = [] ;
   constructor(private MS:MemberService,private ES:EvenmentService,private AS:ArticleService){
 
   }
@@ -49,7 +50,14 @@ export class DashboardComponent {
       this.Nb_members = res.length;
       for(let i=0;i<res.length;i++){
        this.chartLabels.push(res[i].name)
+       this.tab_articles.push(res[i].tab_pub.length)
       }
+      this.chartData = [
+        {
+          label: 'Number of Items',
+          data: this.tab_articles
+        }
+      ];
     })
   }
   getEents(){
