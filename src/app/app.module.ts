@@ -33,6 +33,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormeventComponent } from './formevent/formevent.component';
 import { VisibleComponent } from './visible/visible.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {NgChartsModule} from 'ng2-charts';
+
 
 
 
@@ -76,7 +79,10 @@ import { VisibleComponent } from './visible/visible.component';
     MatPaginatorModule,
     MatSortModule ,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NgChartsModule,
+    MatGridListModule
+    
        
 
   ],

@@ -48,5 +48,9 @@ updateMember(id: string, form:any): Observable<any> {
     return new Observable(observer => observer.next());
   
 }
+GETALL(): Observable<Member[]> {
+  // return this.httpClient.get<Member[]>("127.0.0.1/api/member");
+  return new Observable(observer => observer.next(this.tab));
+}
 
 }
