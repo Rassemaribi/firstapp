@@ -20,6 +20,21 @@
         "titre": "Conference on AI",
         "date": "2022-12-12T00:00:00Z",
         "lieu": "Paris"
+      }, {
+        "id": "fca3",
+        "titre": "Conference on AI",
+        "date": "2022-12-12T00:00:00Z",
+        "lieu": "Pariss"
+      }, {
+        "titre": "Conference on AI",
+        "date": "2022-12-12T00:00:00Z",
+        "lieu": "Paris",
+        "id": "885c"
+      }, {
+        "id": "4dc8",
+        "titre": "Confirance",
+        "date": "2024-04-18T23:00:00.000Z",
+        "lieu": "TUNIS"
       }]
     
     },
@@ -30,8 +45,30 @@
       "type": "Etudiant",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
       "createddate": "12/01/2023",
-      "tab_pub": [],
-      "tab_event": []
+      "tab_pub": [ {
+        "id": "5ffd",
+        "type": "FGEGR",
+        "titre": "GER",
+        "lien": "cd",
+        "sourcepdf": "RACEM ARIBI",
+        "date": "2024-04-17T23:00:00.000Z"
+      }],
+      "tab_event": [  {
+        "id": "1",
+        "titre": "Conference on AI",
+        "date": "2022-12-12T00:00:00Z",
+        "lieu": "Paris"
+      }, {
+        "id": "fca3",
+        "titre": "Conference on AI",
+        "date": "2022-12-12T00:00:00Z",
+        "lieu": "Pariss"
+      }, {
+        "titre": "Conference on AI",
+        "date": "2022-12-12T00:00:00Z",
+        "lieu": "Paris",
+        "id": "885c"
+      }]
     },
     {
       "id": "695",
@@ -40,8 +77,27 @@
       "type": "Etudiant",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
       "createddate": "11/03/2026",
-      "tab_pub": [],
-      "tab_event": []
+      "tab_pub": [
+        {
+          "id": "0efa",
+          "type": "RACEM ARIBI",
+          "titre": "sehfahzmfjz'ghke",
+          "lien": "https://helpx.adobe.com/fr/acrobat/using/links-attachments-pdfs.html#:~:text=Qu'est%2Dce%20qu','une%20adresse%20e%2Dmail.",
+          "sourcepdf": "RACEM ARIBI",
+          "date": "2024-04-25T23:00:00.000Z"
+        }
+      ],
+      "tab_event": [ {
+        "id": "4dc8",
+        "titre": "Confirance",
+        "date": "2024-04-18T23:00:00.000Z",
+        "lieu": "TUNIS"
+      }, {
+        "id": "4dc8",
+        "titre": "Confirance",
+        "date": "2024-04-18T23:00:00.000Z",
+        "lieu": "TUNIS"
+      }]
     }
   ],
   "publication": [
