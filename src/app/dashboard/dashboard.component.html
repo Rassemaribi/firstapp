@@ -1,53 +1,90 @@
-<mat-grid-list cols="4" rowHeight="4:3">
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Members</mat-card-title>
-          <mat-card-subtitle>{{Nb_members}}</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Events</mat-card-title>
-          <mat-card-subtitle>{{Nb_events}}</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Articles</mat-card-title>
-          <mat-card-subtitle>{{Nb_articles}}</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Outils</mat-card-title>
-          <mat-card-subtitle>{{Nb_outils}}</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-  <div class="chart-wrapper">
-    <canvas baseChart
-            [type]="'line'"
-      [datasets]="chartData"
-      [labels]="chartLabels"
-      [options]="chartOptions"
-      >
-    </canvas>
-  </div>
-  <div class="chart-wrapper">
-    <canvas baseChart
-            [type]="'pie'"
-      [datasets]="chartData"
-      [labels]="chartLabels"
-      [options]="chartOptions"
-      >
-    </canvas>
-  </div>
+<div class="card-container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title> Member</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{Nb_member}}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>article</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{Nb_article}}</p>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>outils</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{Nb_outils}}</p>
+      </mat-card-content>
+    </mat-card>
+
+
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>event</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{Nb_event}}</p>
+      </mat-card-content>
+    </mat-card>
+
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'line'"
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        >
+      </canvas>
+    </div>
+
+
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'pie'"
+        [datasets]="chartDataPie" 
+        
+        [labels]="chartLabelsPie"
+        [options]="chartOptions"
+        >
+      </canvas>
+    </div>
+
+
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'polarArea'"
+        [datasets]="chartDataPie" 
+        
+        [labels]="chartLabelsPie"
+        [options]="chartOptions"
+        >
+      </canvas>
+    </div>
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'bar'"
+        [datasets]="chartDataBar" 
+        
+        [labels]="chartLabelsBar"
+        [options]="chartOptions"
+        >
+      </canvas>
+    </div>
+
   
+</div>

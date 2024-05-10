@@ -3,12 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Evenement } from 'src/modéles/Evenement';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class EvenmentService {
-  private apiUrl = 'http://localhost:3000/evenements'; // replace with your API endpoint
+  private apiUrl = 'http://localhost:3000/evenements'; // Remplacez avec votre endpoint API
 
   constructor(private http: HttpClient) { }
 
@@ -34,5 +33,10 @@ export class EvenmentService {
   // Delete
   deleteEvenement(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  // Get All (implémentation de la méthode GETALL)
+  GETAll(): Observable<Evenement[]> {
+    return this.http.get<Evenement[]>(this.apiUrl);
   }
 }
