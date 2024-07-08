@@ -9,111 +9,86 @@ import { ChartDataset, ChartOptions } from 'chart.js';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit{
-
-  chartData: ChartDataset[] = [
-    {
-      // ⤵️ Add these
-      label: '$ in millions',
-      data: []
-    }
-  ];
+export class DashboardComponent implements OnInit {
+  chartData: ChartDataset[] = [{
+    label: 'Publications',
+    data: []
+  }];
   chartLabels: string[] = [];
-  
   chartOptions: ChartOptions = {};
-    
-  chartDataPie: ChartDataset[] = [
-    {
-      // ⤵️ Add these
-      label: '$ in millions',
-      data: [  ]
-    }
-  ];
 
-  chartLabelsPie: string[] = [
+  chartDataPie: ChartDataset[] = [{
+    label: 'Members Distribution',
+    data: []
+  }];
+  chartLabelsPie: string[] = ['Teachers', 'Students'];
 
-  ];
+  chartDataBar: ChartDataset[] = [{
+    label: 'Events Participation',
+    data: []
+  }];
+  chartLabelsBar: string[] = [];
 
+  Nb_event!: number;
+  Nb_outils!: number;
+  Nb_article!: number;
+  Nb_member!: number;
+  tab_articles: number[] = [];
+  tab_evts: number[] = [];
+  nbTeacher: number = 0;
+  nbstudent: number = 0;
 
+  constructor(
+    private memberService: MemberService,
+    private eventService: EvenmentService,
+    private articleService: ArticleService
+  ) {}
 
-
-
-  chartDataBar: ChartDataset[] = [
-    {
-      // ⤵️ Add these
-      label: 'nbevent',
-      data: [  ]
-    }
-  ];
-  chartLabelsBar: string[] = [
-
-  ];
-
-
-
-
-
-
-  Nb_event!:number;
-  Nb_outils!:number;
-  Nb_article!:number;
-  Nb_member!:number;
-  tab_articles:number[]=[];
-  tab_evts:number[]=[];
-  nbTeacher: number=0;
-  nbstudent: number=0;
-  constructor(private MS:MemberService,private ES:EvenmentService,private AS:ArticleService)
-    
-   { 
-    
-  }
-  ngOnInit(){
+  ngOnInit() {
     this.getMembers();
-    this.getArticle();
-  
+    this.getArticles();
   }
-  getMembers(){
-    this.MS.GETALL().subscribe((res)=>{
-      this.Nb_member=res.length;
-      for (let i = 0; i < res.length; i++) {
-       this.chartLabels.push( res[i].name);
-       this.tab_articles.push(res[i].tab_pub.length)
-       if(res[i].type=="teacher"){
-        this.nbTeacher++;
-       }
-       else {this.nbstudent++;
-        this.chartLabelsBar.push(res[i].name)
-        this.tab_evts.push(res[i].tab_event.length)
 
-       }
+  getMembers() {
+    this.memberService.GETALL().subscribe((res) => {
+      this.Nb_member = res.length;
+      res.forEach(member => {
+        this.chartLabels.push(member.name);
+        this.tab_articles.push(member.tab_pub.length);
 
-      }
-      this.chartData=[
-        {
-          label: 'partition',
-          data: this.tab_articles
+        if (member.type === "teacher") {
+          this.nbTeacher++;
+        } else {
+          this.nbstudent++;
+          this.chartLabelsBar.push(member.name);
+          this.tab_evts.push(member.tab_event.length);
         }
-      ]
-      this.chartDataPie=[
-        {
-          label: '',
-          data: [this.nbTeacher,this.nbstudent]
-        }
-      ]
-      this.chartDataBar=[
-        {
-          label: 'partition',
-          data: this.tab_evts
-        }
-      ]
-    })
+      });
+
+      this.updateCharts();
+    });
   }
-  
-  getArticle(){
-    this.AS.GETALL().subscribe((res)=>{
-      this.Nb_article=res.length;
-    })
+
+  getArticles() {
+    this.articleService.GETALL().subscribe((res) => {
+      this.Nb_article = res.length;
+    });
+  }
+
+  updateCharts() {
+    this.chartData = [{
+      label: 'Publications',
+      data: this.tab_articles
+    }];
     
+    this.chartDataPie = [{
+      label: 'Members Distribution',
+      data: [this.nbTeacher, this.nbstudent]
+    }];
+    
+    this.chartDataBar = [{
+      label: 'Events Participation',
+      data: this.tab_evts
+    }];
   }
-
 }
